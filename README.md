@@ -1,70 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#User Management Dashboard
+This web dashboard allows users to manage user details effectively. Users can add, view, update, and delete user information through a user-friendly interface. Below are the features and instructions for setting up and running the application.
 
-## Available Scripts
+Features
+1. User Form
 
-In the project directory, you can run:
+		****Add user details including Name, Date of Birth (DOB), Contact, Email ID, and User 				Description.
+		****Save the user details to the database.
+2. User List
 
-### `npm start`
+		****Display a paginated list of users.
+		****Search and filter options available.
+		****Each user entry displays basic user information.
+3. User Detail View
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+		****View detailed information about a user.
+		****Edit and delete options available.
+4. Delete User
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+		****Delete a user from the database.
+		****Confirmation required before deletion.
+5. Update User
 
-### `npm test`
+		****Update user details.
+		****Save the updated details to the database.
+**Technical Stack**
+		****Frontend: React and TypeScript
+		****Backend: Node.js and Express.js
+		****Database: MongoDB (NoSQL)
+		****Deployment: Deployed to a cloud service (provide URL)
+**Setup Instructions**
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+			git clone https://github.com/GVMANI1248/web-dashboard-frontend2
+   
+2. Navigate to the project directory:
 
-### `npm run build`
+			 cd ./GVMANI1248/web-dashboard-frontend2
+   
+3. Install dependencies for both frontend and backend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+				 cd .\frontend\
+					npm install
+					cd ../backend
+				npm install
+4. Start the backend server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+			npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Start the frontend development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+			cd ../frontend
+			npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6.Access the application through your web browser:
+			https://main--cerulean-duckanoo-fb23c7.netlify.app/
+	 
+Additional Notes
+			Ensure MongoDB is installed and running on your system or provide the connection 					string to your MongoDB Atlas cluster in the backend configuration.
+			The application is responsive and can be used on both desktop and mobile devices.
+Repository Structure
+			*frontend/: Contains the React frontend code.
+			*backend/: Contains the Node.js backend code.m
+			*README.md: Instructions and information about the project.
+			*.gitignore: Specifies intentionally untracked files to ignore.
+			*LICENSE: License information for the project.
+![Screenshot 2024-06-02 202603](https://github.com/GVMANI1248/web-dashboard-frontend2/assets/108290649/c370d0ee-85da-4431-af80-1c8f78185358)
+![Screenshot 2024-06-02 202545](https://github.com/GVMANI1248/web-dashboard-frontend2/assets/108290649/03b77529-6e27-4ecd-809e-ba74bff2cdf6)
+![Screenshot 2024-06-02 202330](https://github.com/GVMANI1248/web-dashboard-frontend2/assets/108290649/c91dd80f-77a2-48a6-85d2-b777b76168c0)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
