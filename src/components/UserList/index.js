@@ -43,6 +43,9 @@ const UserList = () => {
         } else {
           return dateB - dateA;
         }
+      } else {
+        // Default return value to handle unexpected sortBy values
+        return 0;
       }
     });
 
