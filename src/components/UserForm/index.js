@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { ThreeDots } from 'react-loader-spinner';
 import './index.css';
 
 const baseUrl = 'https://web-dashboard-backend.onrender.com';
@@ -113,7 +114,20 @@ const UserForm = () => {
           placeholder="Description"
         />
         <button type="submit" className="form-button" disabled={isLoading}>
-          {isLoading ? 'Saving...' : 'Save'}
+          {isLoading ? (
+            <ThreeDots
+              visible={true}
+              height="80"
+              width="80"
+              color="#4fa94d"
+              radius="9"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          ) : (
+            'Save'
+          )}
         </button>
       </form>
     </div>
