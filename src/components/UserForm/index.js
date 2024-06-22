@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './index.css';
+
 const baseUrl = 'https://web-dashboard-backend.onrender.com';
+
 const UserForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -14,6 +16,8 @@ const UserForm = () => {
     email: '',
     description: ''
   });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (userData) {
@@ -28,6 +32,7 @@ const UserForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const wrappedData = {
       text: formData,
       _id: userData ? userData._id : undefined
@@ -54,6 +59,8 @@ const UserForm = () => {
       }
     } catch (error) {
       console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -105,11 +112,12 @@ const UserForm = () => {
           className="form-textarea"
           placeholder="Description"
         />
-        <button type="submit" className="form-button">Save</button>
+        <button type="submit" className="form-button" disabled={isLoading}>
+          {isLoading ? 'Saving...' : 'Save'}
+        </button>
       </form>
     </div>
   );
 };
 
 export default UserForm;
-
