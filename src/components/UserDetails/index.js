@@ -22,7 +22,6 @@ const UserDetails = ({ details, onBack, onDelete }) => {
         });
         if (response.ok) {
           onDelete(details._id); // Update the UserList state
-          window.location.reload(); // Reload the browser after deletion
         } else {
           console.error('Error:', response.statusText);
         }
